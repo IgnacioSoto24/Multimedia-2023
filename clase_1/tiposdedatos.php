@@ -1,0 +1,5 @@
+<?php
+
+//texto
+//string
+//str
