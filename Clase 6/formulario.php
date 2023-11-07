@@ -27,6 +27,7 @@
 
             ?>
         </select>
+        <input type="text" value="nombre">
         <input type="submit" value="enviar">
     </form>
 </body>
