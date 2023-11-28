@@ -35,9 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 echo "<br>";
 echo "FILES: ";
 echo "<br>";
-echo $_FILES["nombre2"];
 echo"<pre>";
-print_r($_POST);
+print_r($_FILES);
 echo"</pre>";
 
 ?>

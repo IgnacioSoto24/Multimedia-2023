@@ -1,7 +1,7 @@
 <?php
 
 // Incluye la biblioteca de PHP QR Code**
-include 'path/to/qrlib.php';
+include 'phpqrcode/qrlib.php';
 
 // Contenido para el código QR
 $contenido = "Este es un código QR";
