@@ -11,9 +11,8 @@
     $profesion = $_POST['profesion'];
     $discapacidad = $_POST['discapacidad'];
     $donante = $_POST['donante'];
-    
     //Incluir base de datos
-    requiere_once("conexion.php");
+    require_once("conexion.php");
 
 
     $query = "INSERT INTO carnet_2 (nombre, apellido_paterno, apellido_materno, rut, nacionalidad, sexo, fecha_nacimiento, lugar_nacimiento, profesion, discapacidad, donante) 

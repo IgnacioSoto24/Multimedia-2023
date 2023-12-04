@@ -26,7 +26,7 @@
     <input type="text" name="rut" id="rut" class="form-control"><br>
 
     <label for="nacionalidad" class="form-label">Nacionalidad: </label>
-        <select name="select">
+        <select name="nacionalidad">
             <option value="Chilena"> Chilena </option>
             <option value="Peruana"> Peruana </option>
             <option value="Mexicana"> Mexicana </option>
