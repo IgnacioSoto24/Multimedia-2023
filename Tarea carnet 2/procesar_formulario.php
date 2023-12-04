@@ -11,6 +11,16 @@
     $profesion = $_POST['profesion'];
     $discapacidad = $_POST['discapacidad'];
     $donante = $_POST['donante'];
+    $archivo = $_FILES['archivo'];
+
+    $directorio = "img/";
+    $archivo_destino = $directorio . basename($archivo['name']);
+
+    if(move_uploaded_file($archivo['tmp_name'], $archivo_destino)){
+        echo "Subida exitosa " . basename($archivo['name']) . " ha sido subido";
+    }else{
+        echo "Ha ocurrido un error al subir el archivo";
+    }
     //Incluir base de datos
     require_once("conexion.php");
 
