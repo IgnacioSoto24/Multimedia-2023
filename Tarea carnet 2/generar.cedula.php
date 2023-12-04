@@ -20,7 +20,7 @@
     <!-- Anverso -->
     <div>
         <h2>Cédula de Identidad</h2>
-        <!-- Otros elementos del anverso -->
+        <!-- elementos del anverso -->
 
         <!-- Espacio para la firma -->
         <div>Firma: _______________________</div>
@@ -32,10 +32,10 @@
     <!-- Reverso -->
     <div>
         <h2>Reverso</h2>
-        <!-- Otros elementos del reverso -->
+        <!-- elementos del reverso -->
 
-        <!-- Información codificada (texto de ejemplo) -->
-        <div>Información codificada: XXXXXXXXXXXXXXXXXXXX</div>
+        <!-- Información codificada -->
+        <div></div>
     </div>
 </div>
 
