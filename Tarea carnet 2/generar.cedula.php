@@ -13,7 +13,9 @@
 <?php
 
 require_once("conexion.php");
-$sql = "SELECT * FROM carnet_2";
+$sql = "SELECT * FROM carnet_3";
+
+$guardar = $conexion -> query($sql);
 
 ?>
 <div class = "container">
@@ -33,19 +35,25 @@ $sql = "SELECT * FROM carnet_2";
                 <th>Discapacidad</th>
                 <th>Donante</th>
             </tr>
+            <?php
+            while($row = $guardar -> fetch_assoc()){
+            ?>
             <tr>
-                <td>Ignacio</td>
-                <td>Soto</td>
-                <td>Ceballos</td>
-                <td>6516516</td>
-                <td>Chilena</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><?php echo $row['nombre'];?></td>
+                <td><?php echo $row['apellido_paterno'];?></td>
+                <td><?php echo $row['apellido_materno'];?></td>
+                <td><?php echo $row['rut'];?></td>
+                <td><?php echo $row['nacionalidad'];?></td>
+                <td><?php echo $row['sexo'];?></td>
+                <td><?php echo $row['fecha_nacimiento'];?></td>
+                <td><?php echo $row['lugar_nacimiento'];?></td>
+                <td><?php echo $row['profesion'];?></td>
+                <td><?php echo $row['discapacidad'];?></td>
+                <td><?php echo $row['donante'];?></td>
             </tr>
+            <?php
+            }
+            ?>
             </table>
         </div>
     </div>
@@ -53,7 +61,7 @@ $sql = "SELECT * FROM carnet_2";
 <!-- Diseño de la cédula 
 <div class = "carnet">
     <h2>Carnet de Identidad</h2>
-    <img src="<?php echo $foto; ?>" alt="Foto">
+    <img src="<?php //echo $foto; ?>" alt="Foto">
 
 </body>-->
 </html>

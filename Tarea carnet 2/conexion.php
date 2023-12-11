@@ -4,13 +4,14 @@
 
 $db_host = "localhost";
 
-$db_name = "carnet_2";
+$db_name = "carnet_3";
 
 $db_user = "root";
 
 $db_pass = "";
-$conexion = new mysqli($db_host, $db_user, $db_pass, $db_name);
+$conexion = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 
-if ($conexion->connect_error) {
-    die("Error de conexión a la base de datos: " . $conexion->connect_error);
+if(!$conexion){
+    die("Conexion fallida: " . mysqli_connect_error());
 }
+
