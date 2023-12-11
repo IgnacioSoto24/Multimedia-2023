@@ -10,72 +10,78 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 <body>
+<div class = "container">
+    <div class = "row">
+        <div class = "col-3">
+            <form action="procesar_formulario.php" method="POST" enctype="multipart/form-data">
+                <!-- Datos personales -->
+                <label for="nombres" class="form-label">Nombres: </label>
+                <input type="text" name="nombre" id="nombre" class="form-control"><br>
 
-<form action="procesar_formulario.php" method="POST" enctype="multipart/form-data">
-    <!-- Datos personales -->
-    <label for="nombres" class="form-label">Nombres: </label>
-    <input type="text" name="nombre" id="nombre" class="form-control"><br>
+                <label for="apellido_paterno" class="form-label">Apellido Paterno: </label>
+                <input type="text" name="apellido_paterno" id="apellido_paterno" class="form-control"><br>
 
-    <label for="apellido_paterno" class="form-label">Apellido Paterno: </label>
-    <input type="text" name="apellido_paterno" id="apellido_paterno" class="form-control"><br>
+                <label for ="apellido_materno" class ="form-label">Apellido Materno: </label>
+                <input type="text" name ="apellido_materno" id ="apellido_materno" class="form-control"><br>
 
-    <label for ="apellido_materno" class ="form-label">Apellido Materno: </label>
-    <input type="text" name ="apellido_materno" id ="apellido_materno" class="form-control"><br>
+                <label for="rut" class="form-label">Rut: </label>
+                <input type="text" name="rut" id="rut" class="form-control"><br>
 
-    <label for="rut" class="form-label">Rut: </label>
-    <input type="text" name="rut" id="rut" class="form-control"><br>
+                <label for="nacionalidad" class="form-label">Nacionalidad: </label>
+                    <select name="nacionalidad">
+                        <option value="Chilena"> Chilena </option>
+                        <option value="Peruana"> Peruana </option>
+                        <option value="Mexicana"> Mexicana </option>
+                        <option value="Brasileña"> Brasileña </option>
+                        <option value="Paraguayo"> Paraguayo </option>
+                        <option value="Panameño"> Panameño </option>
+                    </select><br>
+                </select><br>
 
-    <label for="nacionalidad" class="form-label">Nacionalidad: </label>
-        <select name="nacionalidad">
-            <option value="Chilena"> Chilena </option>
-            <option value="Peruana"> Peruana </option>
-            <option value="Mexicana"> Mexicana </option>
-            <option value="Brasileña"> Brasileña </option>
-            <option value="Paraguayo"> Paraguayo </option>
-            <option value="Panameño"> Panameño </option>
-        </select><br>
-    </select><br>
+                <!-- Sexo -->
+                <label for="sexo" class="form-label">Sexo: </label>
+                <input type="radio" name="sexo" id="sexo1" value="masculino">
+                <label>Masculino</label>
+                <input type="radio" name="sexo" id="sexo2" value="femenino">
+                <label>Femenino</label><br>
 
-    <!-- Sexo -->
-    <label for="sexo" class="form-label">Sexo: </label>
-    <input type="radio" name="sexo" id="sexo1" value="femenino">
-    <label>Masculino</label>
-    <input type="radio" name="sexo" id="sexo2" value="femenino">
-    <label>Femenino</label><br>
+                <!-- Fecha de Nacimiento -->
+                <label for="fecha_nacimiento" class="form-label">Fecha nacimiento: </label>
+                <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" class="form-control">
 
-    <!-- Fecha de Nacimiento -->
-    <label for="fecha_nacimiento" class="form-label">Fecha nacimiento: </label>
-    <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" class="form-control">
+                <!-- Lugar de Nacimiento -->
+                <label for="lugar_nacimiento" class="form-label">Lugar de Nacimiento: </label>
+                <input type="text" name="lugar_nacimiento" id="lugar_nacimiento" class="form-control">
 
-    <!-- Lugar de Nacimiento -->
-    <label for="lugar_nacimiento" class="form-label">Lugar de Nacimiento: </label>
-    <input type="text" name="lugar_nacimiento" id="lugar_nacimiento" class="form-control">
+                <!-- Profesión -->
+                <label for="profesion" class="form-label">Profesión: </label>
+                <input type="text" name="profesion" id="profesion" class="form-control">
 
-    <!-- Profesión -->
-    <label for="profesion" class="form-label">Profesión: </label>
-    <input type="text" name="profesion" id="profesion" class="form-control">
+                <!-- Registro de Discapacidad -->
+                <label>¿Inscrito en el Registro de Discapacidad?</label><br>
+                <input type="radio" id="discapacidad" name="discapacidad" value="si" required>
+                <label for="discapacidad">Si</label>
+                <input type="radio" id="discapacidad" name="discapacidad" value="no" required>
+                <label for="discapacidad">No</label><br>
 
-    <!-- Registro de Discapacidad -->
-    <label>¿Inscrito en el Registro de Discapacidad?</label><br>
-    <input type="radio" id="discapacidad" name="discapacidad" value="si" required>
-    <label for="discapacidad">Si</label>
-    <input type="radio" id="discapacidad" name="discapacidad" value="no" required>
-    <label for="discapacidad">No</label><br>
+                <!-- Donante -->
+                <label>¿Es donante?</label><br>
+                <input type="radio" id="donante" name="donante" value="si" required>
+                <label for="donante">Si</label>
+                <input type="radio" id="donante" name="donante" value="no" required>
+                <label for="donante">No</label><br>
 
-    <!-- Donante -->
-    <label>¿Es donante?</label><br>
-    <input type="radio" id="donante" name="donante" value="si" required>
-    <label for="donante">Si</label>
-    <input type="radio" id="donante" name="donante" value="no" required>
-    <label for="donante">No</label><br>
+                <!-- Foto -->
+                <label for="archivo" class="form-label">Archivo</label>
+                <input type="file" name="archivo" id="archivo" class="form-control">
 
-    <!-- Foto -->
-    <label for="archivo" class="form-label">Archivo</label>
-    <input type="file" name="archivo" id="archivo" class="form-control">
+                <!-- Botón de envío -->
+                <input type="submit" value="Enviar" class="btn btn-primary mt-2">
+            </form>
+        </div>
+    </div>
+</div>
 
-    <!-- Botón de envío -->
-    <input type="submit" value="Enviar" class="btn btn-primary mt-2">
-</form>
 
 </body>
 </html>
