@@ -4,7 +4,7 @@
 
 $db_host = "localhost";
 
-$db_name = "carnet_3";
+$db_name = "carnet_2";
 
 $db_user = "root";
 

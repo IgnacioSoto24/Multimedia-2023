@@ -13,7 +13,7 @@
 <?php
 
 require_once("conexion.php");
-$sql = "SELECT * FROM carnet_3";
+$sql = "SELECT * FROM carnet_2";
 
 $guardar = $conexion -> query($sql);
 
@@ -64,4 +64,5 @@ $guardar = $conexion -> query($sql);
     <img src="<?php //echo $foto; ?>" alt="Foto">
 
 </body>-->
+
 </html>

@@ -25,15 +25,18 @@
     require_once("conexion.php");
 
 
-    $query = "INSERT INTO carnet_3 (nombre, apellido_paterno, apellido_materno, rut, nacionalidad, sexo, fecha_nacimiento, lugar_nacimiento, profesion, discapacidad, donante) 
+    $query = "INSERT INTO carnet_2 (nombre, apellido_paterno, apellido_materno, rut, nacionalidad, sexo, fecha_nacimiento, lugar_nacimiento, profesion, discapacidad, donante) 
     VALUES ('$nombres', '$apellido_paterno', '$apellido_materno', '$rut', '$nacionalidad', '$sexo', '$fecha_nacim', '$lugar_nacim', '$profesion', '$discapacidad', '$donante')";
     
 
     if ($conexion->query($query) == TRUE) {
+        echo "<br>";
         echo "Registro exitoso";
     } else {
         echo "Error al registrar: " . $conexion->error;
     }
+
+    require_once("generar.cedula.php");
 
     $conexion->close();
 ?>
