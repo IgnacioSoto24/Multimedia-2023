@@ -10,23 +10,42 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
     <style>
-        .rectangulo{
-            width  : 600px;
-            height : 300px;
-            background : LightGray;
-            margin : 20px;
+
+    body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+        .carnet {
+            width: 300px;
+            height: 180px;
+            background-color: #ffffff;
+            border: 2px solid #333333;
+            margin: 50px auto;
             padding: 10px;
-            color  : Gray;
-            border-radius : 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+        .foto {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            background-color: #333333;
+        }
+
+        .datos {
+            font-size: 16px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
     <?php
     require_once("conexion.php");
-    echo "<div class = 'rectangulo'></div>";
-    
-    echo $row['nombre'];
     ?>
+
 </body>
 </html>

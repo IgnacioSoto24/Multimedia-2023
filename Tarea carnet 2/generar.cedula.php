@@ -13,10 +13,8 @@
 <?php
 
 require_once("conexion.php");
-$sql = "SELECT * FROM carnet_2";
-
+$sql = "SELECT * FROM carnet_3";
 $guardar = $conexion -> query($sql);
-
 ?>
 <div class = "container">
     <div class = "row">
@@ -34,6 +32,7 @@ $guardar = $conexion -> query($sql);
                 <th>Profesion</th>
                 <th>Discapacidad</th>
                 <th>Donante</th>
+                <th>QR</th>
             </tr>
             <?php
             while($row = $guardar -> fetch_assoc()){
@@ -50,6 +49,7 @@ $guardar = $conexion -> query($sql);
                 <td><?php echo $row['profesion'];?></td>
                 <td><?php echo $row['discapacidad'];?></td>
                 <td><?php echo $row['donante'];?></td>
+                <td><?php require_once("qr.php")?></td>
             </tr>
             <?php
             }
@@ -58,11 +58,6 @@ $guardar = $conexion -> query($sql);
         </div>
     </div>
 </div>
-<!-- Diseño de la cédula 
-<div class = "carnet">
-    <h2>Carnet de Identidad</h2>
-    <img src="<?php //echo $foto; ?>" alt="Foto">
 
-</body>-->
 
 </html>
